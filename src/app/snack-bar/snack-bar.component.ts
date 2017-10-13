@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {MatSnackBar} from '@angular/material';
 import { ShopComponent } from '../shop/shop.component';
 
@@ -7,21 +7,12 @@ import { ShopComponent } from '../shop/shop.component';
   templateUrl: 'snack-bar.component.html',
 })
 export class SnackBarComponent {
+  @Input() productName: string;
   constructor(public snackBar: MatSnackBar) {}
 
-  openSnackBar() {
-    this.snackBar.openFromComponent(InterieurSnack, {
+  openSnackBar(productName: string) {
+    this.snackBar.open(productName, null, {
       duration: 1000,
     });
   }
-}
-
-
-@Component({
-  selector: 'interieur-snack',
-  templateUrl: 'interieur-snack.html',
-})
-export class InterieurSnack {
-  @Input() shop: ShopComponent;
-  @Input('master') masterName: string;
 }

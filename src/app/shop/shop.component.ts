@@ -31,6 +31,8 @@ export class ShopComponent {
   items = ITEMS;
   selectedItem : Item;
 
+  productName = Item.name;
+
   onSelect (item: Item) : void {
     this.selectedItem = item;
 }
