@@ -1,0 +1,7 @@
+
+<button mat-button [matMenuTriggerFor]="menu">PANIER</button>
+     <mat-menu #menu="matMenu">
+       <ul>
+       <li mat-menu-item *ngFor="let cart of carts"(signalSnack)="panierReceive($event)"> {{ cart }} </li>
+       </ul>
+</mat-menu>
