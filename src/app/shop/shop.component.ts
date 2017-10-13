@@ -8,6 +8,7 @@ export class Item {
   price: number;
   name: string;
   img: string;
+  quantite?: number;
 }
 
 const ITEMS : Item[] = [
