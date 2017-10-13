@@ -29,11 +29,11 @@ const ITEMS : Item[] = [
 export class ShopComponent {
 
   items = ITEMS;
-  selectedItem : Item;
+  // selectedItem : Item;
 
-  productName = Item.name;
+  //productName = selectedItem.name;
 
-  onSelect (item: Item) : void {
-    this.selectedItem = item;
-}
+//   onSelect (item: Item) : void {
+//     // this.selectedItem = item;
+//   }
 }

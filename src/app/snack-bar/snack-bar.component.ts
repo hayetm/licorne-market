@@ -11,7 +11,7 @@ export class SnackBarComponent {
   constructor(public snackBar: MatSnackBar) {}
 
   openSnackBar(productName: string) {
-    this.snackBar.open(productName, null, {
+    this.snackBar.open(productName + " a été ajouté au panier", null, {
       duration: 1000,
     });
   }

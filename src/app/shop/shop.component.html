@@ -2,7 +2,6 @@
   <mat-grid-tile *ngFor="let item of items" [class.selected]="item === selectedItem">
       <img src="{{ item.img }}" alt="">
       {{item.name}} : {{item.price}} euros
-
-    <!-- <snack-bar [productName]="selectedItem.name"></snack-bar> -->
+    <snack-bar [productName]="item.name"></snack-bar>
   </mat-grid-tile>
 </mat-grid-list>
